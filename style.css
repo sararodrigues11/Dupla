@@ -26,8 +26,6 @@ h2 {
     width: 500px;
     height: 40px;
     background-color: #F6F1D1;
-    margin: 20px 0; 
-    border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -68,6 +66,29 @@ h2 {
     gap: 20px;
   }
   
+
+.box-line-2,
+.box-line-3 {
+    display: none; 
+}
+
+
+.box-line-1 {
+    background-color: #F6F1D1;
+    color: #0B2027;
+    border-radius: 5px;
+    padding: 10px 200px;
+    margin: 10px;
+}
+
+.box-line-2,
+.box-line-3 {
+    background-color: #F6F1D1;
+    color: #0B2027;
+    border-radius: 5px;
+    padding: 10px 200px;
+    margin: 10px;
+}
   
   .btn {
     background-color: #40798C; 
