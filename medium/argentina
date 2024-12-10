@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Guess the country!</title>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="text-container">
+        <h2>Guess the Country!</h2> <!-- This is the text line above the buttons -->
+    </div>
+
+
+    <div class="box-line-1">2nd largest country in South America</div>
+    <div class="box-line-2">Country where great football names such as Lionel Messi borned</div>
+    <div class="box-line-3">Its capital has “good air"</div>
+
+<div class="answer-box">
+    <input type="text" id="userAnswer" placeholder="Type your guess here..." />
+</div>
+    
+         <div class="button-container">
+            <button class="btn">Previous</button>
+            <button class="btn">Hint</button>
+            <button class="btn">Next</button>
+        </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
