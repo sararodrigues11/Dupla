@@ -1,109 +1,176 @@
 body {
-    background-color: #0B2027;
-    color: #F6F1D1; /*texto*/
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-  }
-  
-  .text-container {
-    margin-bottom: 20px; 
+  background-color: #0B2027;
+  color: #F6F1D1; 
+  font-family: "Roboto Slab", serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
 
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;  
+  font-style: normal;  
+}
+
+.text-container {
+  margin-bottom: 20px; 
+}
 
 h2 {
-    font-size: 35px; 
-    text-align: center;
-    margin: 0;
-    color: #F6F1D1;
+  font-size: 35px; 
+  text-align: center;
+  margin: 0;
+  color: #F6F1D1;
+  font-family: "Roboto Slab", serif; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
 }
-
 
 .box-line {
-    width: 500px;
-    height: 40px;
-    background-color: #F6F1D1;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    color: #0B2027;
-    font-size: 16px;
-    text-align: center;
+  width: 500px;
+  height: 40px;
+  background-color: #F6F1D1;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  color: #0B2027;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-
 .answer-box {
-    padding-top: 40px;
-    margin-bottom: 20px; 
+  padding-top: 40px;
+  margin-bottom: 20px; 
 }
 
 .answer-box input {
-    width: 300px; 
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #40798C;
-    font-size: 16px;
-    text-align: center; 
-    background-color: #CFD7C7; 
-    color: #0B2027; 
-    transition: border-color 0.3s ease; 
+  width: 300px; 
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #40798C;
+  font-size: 16px;
+  text-align: center; 
+  background-color: #CFD7C7; 
+  color: #0B2027; 
+  transition: border-color 0.3s ease; 
+  font-family: "Roboto Slab", serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
-
 
 .answer-box input:focus {
-    border-color: #70A9A1; 
-    outline: none;
+  border-color: #70A9A1; 
+  outline: none;
 }
 
-
-
-  .button-container {
-    text-align: center;
-    display: flex;
-    gap: 20px;
-  }
-  
+.button-container {
+  text-align: center;
+  display: flex;
+  gap: 20px;
+}
 
 .box-line-2,
 .box-line-3 {
-    display: none; 
+  display: none; 
 }
-
 
 .box-line-1 {
-    background-color: #F6F1D1;
-    color: #0B2027;
-    border-radius: 5px;
-    padding: 10px 200px;
-    margin: 10px;
+  background-color: #F6F1D1;
+  color: #0B2027;
+  border-radius: 5px;
+  padding: 10px 200px;
+  margin: 10px;
+  font-family: "Roboto Slab", serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .box-line-2,
 .box-line-3 {
-    background-color: #F6F1D1;
-    color: #0B2027;
-    border-radius: 5px;
-    padding: 10px 200px;
-    margin: 10px;
+  background-color: #F6F1D1;
+  color: #0B2027;
+  border-radius: 5px;
+  padding: 10px 200px;
+  margin: 10px;
+  font-family: "Roboto Slab", serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
+
+.btn {
+  background-color: #40798C; 
+  color: #F6F1D1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Roboto Slab", serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.btn:hover {
+  background-color: #70A9A1;
+}
+
+
+@media (max-width: 768px) {
   
+  h2 {
+    font-size: 28px; 
+  }
+
+  .box-line {
+    width: 90%; 
+    font-size: 14px; 
+    padding: 10px;
+  }
+
+  .answer-box input {
+    width: 80%; 
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .button-container {
+    flex-direction: column; 
+    gap: 10px;
+  }
+
   .btn {
-    background-color: #40798C; 
-    color: #F6F1D1;
+    width: 100%; 
+    padding: 12px 0;
+  }
+
+  .box-line-1,
+  .box-line-2,
+  .box-line-3 {
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  
+}
 
-  .btn:hover {
-    background-color: #70A9A1;
+@media (max-width: 480px) {
+ 
+  h2 {
+    font-size: 24px; 
   }
 
-  
+  .box-line {
+    width: 100%; 
+    font-size: 12px; 
+  }
+
+  .answer-box input {
+    width: 90%; 
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .btn {
+    width: 100%; 
+    font-size: 14px; 
+  }
+}
