@@ -6,12 +6,12 @@
     <title> Guess the country!</title>
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="easy/style.css">
 </head>
 <body>
 
     <div class="text-container">
-        <h2>Guess the Country!</h2> <!-- This is the text line above the buttons -->
+        <h2>Guess the Country!</h2> 
     </div>
 
 
@@ -24,9 +24,9 @@
 </div>
     
          <div class="button-container">
-            <button class="btn">Previous</button>
-            <button class="btn">Hint</button>
-            <button class="btn">Next</button>
+            <button class="btn" id="prevButton">Previous</button>
+            <button class="btn" id="hintButton">Hint</button>
+            <button class="btn" id="nextButton">Next</button>
         </div>
 
     <script src="script.js"></script> 
