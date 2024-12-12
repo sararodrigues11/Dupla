@@ -6,7 +6,7 @@
     <title> Guess the country!</title>
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../easy/style.css">
 </head>
 <body>
 
@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It has one of the largest oil reserves in the world</div>
-    <div class="box-line-2">The flag has three colors: yellow, blue and red and contains 8 stars</div>
-    <div class="box-line-3">It was the first nation in Latin America to gain independence from Spain</div>
+    <div class="box-line-1">It is the only country that occupies an entire continent and is surrounded by oceans</div>
+    <div class="box-line-2">Known for its “giant” animals</div>
+    <div class="box-line-3">Famous because kangaroos and koalas live there</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -61,7 +61,7 @@
             });
     
             
-            const correctCountry = "venezuela";  
+            const correctCountry = "australia";  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,10 +83,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Venezuela! This was easy, should we go to the next level?");
+                alert("Correct! The country is Australia!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/argentina.html";
+                    window.location.href = "../medium/canada.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

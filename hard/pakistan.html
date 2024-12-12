@@ -6,7 +6,7 @@
     <title> Guess the country!</title>
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../easy/style.css">
 </head>
 <body>
 
@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It has one of the largest oil reserves in the world</div>
-    <div class="box-line-2">The flag has three colors: yellow, blue and red and contains 8 stars</div>
-    <div class="box-line-3">It was the first nation in Latin America to gain independence from Spain</div>
+    <div class="box-line-1">Located in South Asia, bordering India, China, Afghanistan and Iran</div>
+    <div class="box-line-2">The most popular sport in this country is cricket</div>
+    <div class="box-line-3">Its capital is Islamabad</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,6 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
+ 
         <script>
             console.log("Hello, World!");
     
@@ -61,7 +62,7 @@
             });
     
             
-            const correctCountry = "venezuela";  
+            const correctCountry = "pakistan";  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Venezuela! This was easy, should we go to the next level?");
+                alert("Correct! The country is Pakistan!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/argentina.html";
+                    window.location.href = "../hard/puertorico.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

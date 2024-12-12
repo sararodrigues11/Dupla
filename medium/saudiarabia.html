@@ -6,7 +6,7 @@
     <title> Guess the country!</title>
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../easy/style.css">
 </head>
 <body>
 
@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It has one of the largest oil reserves in the world</div>
-    <div class="box-line-2">The flag has three colors: yellow, blue and red and contains 8 stars</div>
-    <div class="box-line-3">It was the first nation in Latin America to gain independence from Spain</div>
+    <div class="box-line-1">It has the largest deserts in the world</div>
+    <div class="box-line-2">It is the country that is home to Mecca and Medina, two of the holiest cities in Islam</div>
+    <div class="box-line-3">Has promoted major international sporting events, such as organizing the Spanish Super Cup and financing European football clubs</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,6 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
+  
         <script>
             console.log("Hello, World!");
     
@@ -61,7 +62,7 @@
             });
     
             
-            const correctCountry = "venezuela";  
+            const correctCountry = "saudi arabia";  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Venezuela! This was easy, should we go to the next level?");
+                alert("Correct! The country is Saudi Arabia! Should we make this a little bit harder?");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/argentina.html";
+                    window.location.href = "../hard/af.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");
