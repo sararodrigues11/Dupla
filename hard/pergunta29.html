@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is located in southwestern Europe, bordering Greece, Montenegro and Kosovo</div>
-    <div class="box-line-2">Tirana is the capital and largest city of this country, known for its colorful architecture and vibrant cultural and social life</div>
-    <div class="box-line-3">It is famous for its hospitality, and the citizens are known to be very welcoming to visitors</div>
+    <div class="box-line-1">Located in South Asia, bordering India, China, Afghanistan and Iran</div>
+    <div class="box-line-2">The most popular sport in this country is cricket</div>
+    <div class="box-line-3">Its capital is Islamabad</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,7 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
-
+ 
         <script>
             console.log("Hello, World!");
     
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["albania", "albânia", "Albania", "Albânia"];   
+            const correctCountry = ["pakistan", "Pakistan", "Paquistão", "paquistão"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Albania!");
+                alert("Correct! The country is Pakistan!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/bahamas.html";
+                    window.location.href = "../hard/pergunta30.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

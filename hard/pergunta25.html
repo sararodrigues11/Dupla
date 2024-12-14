@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Shakira is one of the world-renowned singers, who was born in this country</div>
-    <div class="box-line-2">It is the only country in South America that has coastlines on both the Pacific Ocean and the Caribbean Sea</div>
-    <div class="box-line-3">Its capital is Bogotá</div>
+    <div class="box-line-1">It is located in the northwest region of South America, bordering Colombia, Peru and the Pacific Ocean to the west</div>
+    <div class="box-line-2">The flag is made up of three horizontal bands: yellow, blue and red, with yellow</div>
+    <div class="box-line-3">The flag has a bird</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,7 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
- 
+
         <script>
             console.log("Hello, World!");
     
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["colombia", "Colombia", "colômbia", "Colômbia"];  
+            const correctCountry = ["ecuador", "equador", "Ecuador", "Equador"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Colombia!");
+                alert("Correct! The country is Ecuador!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/cuba.html";
+                    window.location.href = "../hard/pergunta26.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

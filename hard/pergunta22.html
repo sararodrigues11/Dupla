@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Where the musical Mamma Mia is set</div>
-    <div class="box-line-2">Country known for its mythology</div>
-    <div class="box-line-3">It has a rich heritage of monuments, such as the Temple of Athens</div>
+    <div class="box-line-1">The capital of this country is Kabul</div>
+    <div class="box-line-2">It has a rich cultural heritage, with a history that mixes Persian, Mongol, Indian and Islamic influences</div>
+    <div class="box-line-3">It is located in central Asia, bordering countries such as Iran, Pakistan, China, Tajikistan, Uzbekistan and Turkmenistan</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -28,6 +28,7 @@
             <button class="btn" id="hintButton">Hint</button>
             <button class="btn" id="nextButton">Next</button>
         </div>
+
 
         <script>
             console.log("Hello, World!");
@@ -60,8 +61,8 @@
                 }
             });
     
-            
-            const correctCountry = ["greece", "Greece", "grécia", "Grécia"];   
+
+            const correctCountry = ["afghanistan", "afeganistão", "Afghanistan", "Afganistão"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Greece!");
+                alert("Correct! The country is Afghanistan!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/jamaica.html";
+                    window.location.href = "../hard/pergunta23.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

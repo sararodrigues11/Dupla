@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">The capital of this country is Kabul</div>
-    <div class="box-line-2">It has a rich cultural heritage, with a history that mixes Persian, Mongol, Indian and Islamic influences</div>
-    <div class="box-line-3">It is located in central Asia, bordering countries such as Iran, Pakistan, China, Tajikistan, Uzbekistan and Turkmenistan</div>
+    <div class="box-line-1"> Located in the Indian Ocean</div>
+    <div class="box-line-2"> Tourist destination famous for its paradisiacal beaches and luxury resorts</div>
+    <div class="box-line-3"> Famous for its white sand beaches and crystal clear waters</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -61,8 +61,8 @@
                 }
             });
     
-
-            const correctCountry = ["afghanistan", "afeganistão", "Afghanistan", "Afganistão"];   
+            
+            const correctCountry = ["maldives", "Maldives", "maldivas", "Maldivas"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Afghanistan!");
+                alert("Correct! The country is Maldives!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/albania.html";
+                    window.location.href = "../medium/pergunta21.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

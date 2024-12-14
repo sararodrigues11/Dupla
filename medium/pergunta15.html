@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Located in South Asia, bordering India, China, Afghanistan and Iran</div>
-    <div class="box-line-2">The most popular sport in this country is cricket</div>
-    <div class="box-line-3">Its capital is Islamabad</div>
+    <div class="box-line-1">Singer Camila Cabello has a song named after the capital of this country</div>
+    <div class="box-line-2">Its flag has five horizontal stripes</div>
+    <div class="box-line-3">It is known for its music, especially salsa, and the famous salsa singer Celia Cruz</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,7 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
- 
+
         <script>
             console.log("Hello, World!");
     
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["pakistan", "Pakistan", "Paquistão", "paquistão"];   
+            const correctCountry = ["cuba", "Cuba"];  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Pakistan!");
+                alert("Correct! The country is Cuba!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/puertorico.html";
+                    window.location.href = "../medium/pergunta16.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

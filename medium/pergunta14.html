@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Country of the Pharaohs</div>
-    <div class="box-line-2">Known for its great pyramids</div>
-    <div class="box-line-3">The country is dominated by the Sahara desert</div>
+    <div class="box-line-1">Shakira is one of the world-renowned singers, who was born in this country</div>
+    <div class="box-line-2">It is the only country in South America that has coastlines on both the Pacific Ocean and the Caribbean Sea</div>
+    <div class="box-line-3">Its capital is Bogotá</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["egypt", "Egypt", "egito", "Egito"];   
+            const correctCountry = ["colombia", "Colombia", "colômbia", "Colômbia"];  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Egypt!");
+                alert("Correct! The country is Colombia!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/finland.html";
+                    window.location.href = "../medium/pergunta15.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It was discovered by Christopher Columbus in 1492, and since then it has been an important colony for the English</div>
-    <div class="box-line-2">It is made up of more than 700 islands and islets, located in the Caribbean</div>
-    <div class="box-line-3">The country gained its independence from the United Kingdom in 1973</div>
+    <div class="box-line-1">It is the only country that occupies an entire continent and is surrounded by oceans</div>
+    <div class="box-line-2">Known for its “giant” animals</div>
+    <div class="box-line-3">Famous because kangaroos and koalas live there</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -28,7 +28,6 @@
             <button class="btn" id="hintButton">Hint</button>
             <button class="btn" id="nextButton">Next</button>
         </div>
-
 
         <script>
             console.log("Hello, World!");
@@ -62,7 +61,7 @@
             });
     
             
-            const correctCountry = ["bahamas", "Bahamas"];   
+            const correctCountry = ["australia", "Australia", "austrália", "Austrália"];    
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +83,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Bahamas!");
+                alert("Correct! The country is Australia!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/ecuador.html";
+                    window.location.href = "../medium/perrgunta13.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

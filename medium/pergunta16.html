@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">2nd largest country in South America</div>
-    <div class="box-line-2">Country where great football names such as Lionel Messi borned</div>
-    <div class="box-line-3">Its capital has “good air"</div>
+    <div class="box-line-1">Country of the Pharaohs</div>
+    <div class="box-line-2">Known for its great pyramids</div>
+    <div class="box-line-3">The country is dominated by the Sahara desert</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,6 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
+ 
         <script>
             console.log("Hello, World!");
     
@@ -61,7 +62,7 @@
             });
     
             
-            const correctCountry = ["argentina", "Argentina"];    
+            const correctCountry = ["egypt", "Egypt", "egito", "Egito"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Argentina!");
+                alert("Correct! The country is Egypt!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/australia.html";
+                    window.location.href = "../medium/pergunta17.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

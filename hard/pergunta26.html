@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is a Nordic country, located in northern Europe, bordering Sweden, Russia and Norway</div>
-    <div class="box-line-2">It is famous for its education system, which is considered one of the best in the world, with a focus on equality and innovation</div>
-    <div class="box-line-3">The country is known for its large number of lakes and forests, which cover more than 70% of its territory</div>
+    <div class="box-line-1">The traditional dance of this country is hula</div>
+    <div class="box-line-2">It is an archipelago made up of more than 300 islands, of which around 100 are inhabited</div>
+    <div class="box-line-3">It is famous for its tropical beaches with white sand, crystal clear waters and corals</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,7 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
- 
+
         <script>
             console.log("Hello, World!");
     
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["finland", "Finland", "Filândia", "filândia"];   
+            const correctCountry = ["fiji", "Fiji"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Finland!");
+                alert("Correct! The country is Fiji!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/greece.html";
+                    window.location.href = "../hard/pergunta27.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

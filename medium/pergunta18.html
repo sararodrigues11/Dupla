@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is located in the northwest region of South America, bordering Colombia, Peru and the Pacific Ocean to the west</div>
-    <div class="box-line-2">The flag is made up of three horizontal bands: yellow, blue and red, with yellow</div>
-    <div class="box-line-3">The flag has a bird</div>
+    <div class="box-line-1">Where the musical Mamma Mia is set</div>
+    <div class="box-line-2">Country known for its mythology</div>
+    <div class="box-line-3">It has a rich heritage of monuments, such as the Temple of Athens</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -28,7 +28,6 @@
             <button class="btn" id="hintButton">Hint</button>
             <button class="btn" id="nextButton">Next</button>
         </div>
-
 
         <script>
             console.log("Hello, World!");
@@ -62,7 +61,7 @@
             });
     
             
-            const correctCountry = ["ecuador", "equador", "Ecuador", "Equador"];   
+            const correctCountry = ["greece", "Greece", "grécia", "Grécia"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +83,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Ecuador!");
+                alert("Correct! The country is Greece!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/fiji.html";
+                    window.location.href = "../medium/pergunta19.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

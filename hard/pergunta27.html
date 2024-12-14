@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is known for its castle tradition, with more than 100 castles and fortresses spread across the country</div>
-    <div class="box-line-2">It was part of the Austro-Hungarian Empire until the end of the First World War, when it joined Czechoslovakia</div>
-    <div class="box-line-3">During the Second World War, it was a fascist state allied with Nazi Germany</div>
+    <div class="box-line-1">It is a Special Administrative Region of China, located on the southern coast of China</div>
+    <div class="box-line-2">It is also a center for technology, finance and commerce</div>
+    <div class="box-line-3">During World War II, it was occupied by Japan</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["slovakia", "Slovakia", "Eslováquia", "eslováquia"];   
+            const correctCountry = ["hong kong", "Hong Kong", "hong-kong", "Hong-Kong"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Slovakia!");
+                alert("Correct! The country is Hong Kong!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/thailand.html";
+                    window.location.href = "../hard/pergunta28.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

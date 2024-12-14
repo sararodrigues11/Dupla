@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1"> Located in the Indian Ocean</div>
-    <div class="box-line-2"> Tourist destination famous for its paradisiacal beaches and luxury resorts</div>
-    <div class="box-line-3"> Famous for its white sand beaches and crystal clear waters</div>
+    <div class="box-line-1">It was discovered by Christopher Columbus in 1492, and since then it has been an important colony for the English</div>
+    <div class="box-line-2">It is made up of more than 700 islands and islets, located in the Caribbean</div>
+    <div class="box-line-3">The country gained its independence from the United Kingdom in 1973</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["maldives", "Maldives", "maldivas", "Maldivas"];   
+            const correctCountry = ["bahamas", "Bahamas"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Maldives!");
+                alert("Correct! The country is Bahamas!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/saudiarabia.html";
+                    window.location.href = "../hard/pergunta25.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

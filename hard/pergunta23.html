@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is a Special Administrative Region of China, located on the southern coast of China</div>
-    <div class="box-line-2">It is also a center for technology, finance and commerce</div>
-    <div class="box-line-3">During World War II, it was occupied by Japan</div>
+    <div class="box-line-1">It is located in southwestern Europe, bordering Greece, Montenegro and Kosovo</div>
+    <div class="box-line-2">Tirana is the capital and largest city of this country, known for its colorful architecture and vibrant cultural and social life</div>
+    <div class="box-line-3">It is famous for its hospitality, and the citizens are known to be very welcoming to visitors</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["hong kong", "Hong Kong", "hong-kong", "Hong-Kong"];   
+            const correctCountry = ["albania", "albânia", "Albania", "Albânia"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Hong Kong!");
+                alert("Correct! The country is Albania!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/norway.html";
+                    window.location.href = "../hard/pergunta24.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

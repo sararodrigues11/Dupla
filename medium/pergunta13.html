@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is the only country that occupies an entire continent and is surrounded by oceans</div>
-    <div class="box-line-2">Known for its “giant” animals</div>
-    <div class="box-line-3">Famous because kangaroos and koalas live there</div>
+    <div class="box-line-1">Country of Ice Hockey</div>
+    <div class="box-line-2">It has two official languages, French and English</div>
+    <div class="box-line-3">The flag has a drawn leaf</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,6 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
+ 
         <script>
             console.log("Hello, World!");
     
@@ -61,7 +62,7 @@
             });
     
             
-            const correctCountry = ["australia", "Australia", "austrália", "Austrália"];    
+            const correctCountry = ["canada", "Canada", "canadá", "Canadá"];    
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Australia!");
+                alert("Correct! The country is Canada!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/canada.html";
+                    window.location.href = "../medium/pergunta14.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

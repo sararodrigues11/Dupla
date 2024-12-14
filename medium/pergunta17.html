@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Singer Camila Cabello has a song named after the capital of this country</div>
-    <div class="box-line-2">Its flag has five horizontal stripes</div>
-    <div class="box-line-3">It is known for its music, especially salsa, and the famous salsa singer Celia Cruz</div>
+    <div class="box-line-1">It is a Nordic country, located in northern Europe, bordering Sweden, Russia and Norway</div>
+    <div class="box-line-2">It is famous for its education system, which is considered one of the best in the world, with a focus on equality and innovation</div>
+    <div class="box-line-3">The country is known for its large number of lakes and forests, which cover more than 70% of its territory</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,7 +29,7 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
-
+ 
         <script>
             console.log("Hello, World!");
     
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["cuba", "Cuba"];  
+            const correctCountry = ["finland", "Finland", "Filândia", "filândia"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Cuba!");
+                alert("Correct! The country is Finland!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/egypt.html";
+                    window.location.href = "../medium/pergunta18.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

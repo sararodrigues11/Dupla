@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is famous for its Viking traditions</div>
-    <div class="box-line-2">Skiing is one of the most popular sports in this country</div>
-    <div class="box-line-3">Its capital is Oslo</div>
+    <div class="box-line-1">Where the football world cup was hosted in 2024</div>
+    <div class="box-line-2">The country is known for its deserts and sand dunes, as well as its beautiful beaches and coastal areas</div>
+    <div class="box-line-3">The capital is Doah</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["norway", "Norway", "noruega", "Noruega"];   
+            const correctCountry = ["qatar", "Qatar", "Catar", "catar"];  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Norway!");
+                alert("Correct! The country is Qatar!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/pakistan.html";
+                    window.location.href = "../hard/pergunta32.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

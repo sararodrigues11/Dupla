@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It has the largest deserts in the world</div>
-    <div class="box-line-2">It is the country that is home to Mecca and Medina, two of the holiest cities in Islam</div>
-    <div class="box-line-3">Has promoted major international sporting events, such as organizing the Spanish Super Cup and financing European football clubs</div>
+    <div class="box-line-1">2nd largest country in South America</div>
+    <div class="box-line-2">Country where great football names such as Lionel Messi borned</div>
+    <div class="box-line-3">Its capital has “good air"</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -29,7 +29,6 @@
             <button class="btn" id="nextButton">Next</button>
         </div>
 
-  
         <script>
             console.log("Hello, World!");
     
@@ -62,7 +61,7 @@
             });
     
             
-            const correctCountry = ["saudi arabia", "Saudi arabia", "Saudi Arabia", "arábia saudita","Arábia saudita", "Arábia Saudita" ];   
+            const correctCountry = ["argentina", "Argentina"];    
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +83,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Saudi Arabia! Should we make this a little bit harder?");
+                alert("Correct! The country is Argentina!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/af.html";
+                    window.location.href = "../medium/pergunta12.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

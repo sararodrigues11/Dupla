@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Where the football world cup was hosted in 2024</div>
-    <div class="box-line-2">The country is known for its deserts and sand dunes, as well as its beautiful beaches and coastal areas</div>
-    <div class="box-line-3">The capital is Doah</div>
+    <div class="box-line-1">One of the best-known islands in the Caribbean</div>
+    <div class="box-line-2">Known for its tropical forests</div>
+    <div class="box-line-3">Its flag consists of 3 bands of different colors, a triangle and a star</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["qatar", "Qatar", "Catar", "catar"];  
+            const correctCountry = ["puerto rico", "Puerto rico", "Puerto Rico"];    
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Qatar!");
+                alert("Correct! The country is Puerto Rico!");
                 
                 setTimeout(function() {
-                    window.location.href = "../hard/slovakia.html";
+                    window.location.href = "../hard/pergunta31.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");

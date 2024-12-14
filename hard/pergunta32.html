@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is an island located in the Caribbean Sea</div>
-    <div class="box-line-2">It is the birthplace of reggae</div>
-    <div class="box-line-3">Tropical island</div>
+    <div class="box-line-1">It is known for its castle tradition, with more than 100 castles and fortresses spread across the country</div>
+    <div class="box-line-2">It was part of the Austro-Hungarian Empire until the end of the First World War, when it joined Czechoslovakia</div>
+    <div class="box-line-3">During the Second World War, it was a fascist state allied with Nazi Germany</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +62,7 @@
             });
     
             
-            const correctCountry = ["jamaica", "Jamaica"];   
+            const correctCountry = ["slovakia", "Slovakia", "Eslováquia", "eslováquia"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -84,10 +84,10 @@
                     function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Jamaica!");
+                alert("Correct! The country is Slovakia!");
                 
                 setTimeout(function() {
-                    window.location.href = "../medium/maldives.html";
+                    window.location.href = "../hard/pergunta33.html";
                 }, 1000);
             } else {
                 alert("Oops! Try again.");
