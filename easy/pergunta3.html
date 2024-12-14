@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It has one of the largest oil reserves in the world</div>
-    <div class="box-line-2">The flag has three colors: yellow, blue and red and contains 8 stars</div>
-    <div class="box-line-3">It was the first nation in Latin America to gain independence from Spain</div>
+    <div class="box-line-1">It is considered the world capital of fashion, with iconic brands such as Chanel, Dior and Louis Vuitton</div>
+    <div class="box-line-2">Its motto is "Freedom, Equality, Fraternity"</div>
+    <div class="box-line-3">It houses one of the best-known works, “Mona Lisa”</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -61,7 +61,7 @@
             });
     
             
-            const correctCountry = "venezuela";  
+            const correctCountry = ["france", "France", "França","frança"];    
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -79,27 +79,25 @@
                 }
             });
     
-                
-                    function checkAnswer() {
-            const userAnswer = userAnswerInput.value.trim().toLowerCase();
-            if (userAnswer === correctCountry.toLowerCase()) {
-                alert("Correct! The country is Venezuela! This was easy, should we go to the next level?");
-                
-                setTimeout(function() {
-                    window.location.href = "../medium/argentina.html";
-                }, 1000);
-            } else {
-                alert("Oops! Try again.");
+           
+            function checkAnswer() {
+                const userAnswer = userAnswerInput.value.trim().toLowerCase();
+                if (userAnswer === correctCountry.toLowerCase()) {
+                    alert("Correct! The country is France!");
+                   
+                    window.location.href = "pergunta4.html";
+                } else {
+                    alert("Oops! Try again.");
+                }
+                userAnswerInput.value = "";
             }
-            userAnswerInput.value = ""; 
-        }
-
+    
            
             function previousQuestion() {
                 alert("Going to previous question...");
             
             }
-        </script>
+        </script>  
 
 </body>
 </html>

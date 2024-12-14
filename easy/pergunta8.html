@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is considered the country of video games</div>
-    <div class="box-line-2">Country of Origami</div>
-    <div class="box-line-3">Largest K-Pop culture in the world</div>
+    <div class="box-line-1">It is the birthplace of flamenco, a style of music and dance full of passion and energy</div>
+    <div class="box-line-2">The king is still a member of power</div>
+    <div class="box-line-3">It has a world-renowned cultural dish, “Paella</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -61,7 +61,7 @@
             });
     
             
-            const correctCountry = "japan";  
+            const correctCountry = ["spain", "espanha", "Spain", "Espanha"];    
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,9 +83,9 @@
             function checkAnswer() {
                 const userAnswer = userAnswerInput.value.trim().toLowerCase();
                 if (userAnswer === correctCountry.toLowerCase()) {
-                    alert("Correct! The country is Japan!");
+                    alert("Correct! The country is Spain!");
                    
-                    window.location.href = "mexico.html";
+                    window.location.href = "pergunta9.html";
                 } else {
                     alert("Oops! Try again.");
                 }

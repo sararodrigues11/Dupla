@@ -59,7 +59,7 @@
         });
 
         
-        const correctCountry = "brazil";  
+        const correctCountry = ["brazil", "brasil", "Brazil", Brasil];    
 
         
         const userAnswerInput = document.getElementById("userAnswer");
@@ -83,7 +83,7 @@
             if (userAnswer === correctCountry.toLowerCase()) {
                 alert("Correct! The country is Brazil!");
                
-                window.location.href = "china.html";
+                window.location.href = "pergunta1.html";
             } else {
                 alert("Oops! Try again.");
             }

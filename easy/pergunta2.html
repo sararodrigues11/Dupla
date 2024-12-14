@@ -15,10 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Has the largest film industry</div>
-    <div class="box-line-2">A major producer and consumer of technology 
-        with companies such as Apple, Google and Microsoft having their headquarters there</div>
-    <div class="box-line-3">Its flag contains 50 stars, with great meaning</div>
+    <div class="box-line-1">City where William Shakespeare was born</div>
+    <div class="box-line-2">The great wizards emerged here</div>
+    <div class="box-line-3">Where you can ride the iconic red buses</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -62,7 +61,7 @@
             });
     
             
-            const correctCountry = ["usa", "america", "united states"];  
+            const correctCountry = ["england","uk", "united kingdom", "England", "Uk", "United Kingdom","inglaterra","Inglaterra"];  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -82,23 +81,23 @@
     
            
             function checkAnswer() {
-             const userAnswer = userAnswerInput.value.trim().toLowerCase();
-        if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
-                 alert("Correct! The country is USA!");
-             window.location.href = "venezuela.html";
-        } else {
-                alert("Oops! Try again.");
-        }
-         userAnswerInput.value = ""; 
-}
-
+                const userAnswer = userAnswerInput.value.trim().toLowerCase();
+                if (correctCountry.includes(userAnswer)) {
+                    alert("Correct! The country is England!");
+                   
+                    window.location.href = "pergunta3.html";
+                } else {
+                    alert("Oops! Try again.");
+                }
+                userAnswerInput.value = "";
+            }
     
            
             function previousQuestion() {
                 alert("Going to previous question...");
             
             }
-        </script>
+        </script>  
 
 </body>
 </html>

@@ -15,9 +15,10 @@
     </div>
 
 
-    <div class="box-line-1">It is the birthplace of flamenco, a style of music and dance full of passion and energy</div>
-    <div class="box-line-2">The king is still a member of power</div>
-    <div class="box-line-3">It has a world-renowned cultural dish, “Paella</div>
+    <div class="box-line-1">Has the largest film industry</div>
+    <div class="box-line-2">A major producer and consumer of technology 
+        with companies such as Apple, Google and Microsoft having their headquarters there</div>
+    <div class="box-line-3">Its flag contains 50 stars, with great meaning</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -61,7 +62,7 @@
             });
     
             
-            const correctCountry = "spain";  
+            const correctCountry = ["usa", "america", "united states"];  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -81,16 +82,16 @@
     
            
             function checkAnswer() {
-                const userAnswer = userAnswerInput.value.trim().toLowerCase();
-                if (userAnswer === correctCountry.toLowerCase()) {
-                    alert("Correct! The country is Spain!");
-                   
-                    window.location.href = "usa.html";
-                } else {
-                    alert("Oops! Try again.");
-                }
-                userAnswerInput.value = "";
-            }
+             const userAnswer = userAnswerInput.value.trim().toLowerCase();
+        if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
+                 alert("Correct! The country is USA!");
+             window.location.href = "pergunta10.html";
+        } else {
+                alert("Oops! Try again.");
+        }
+         userAnswerInput.value = ""; 
+}
+
     
            
             function previousQuestion() {

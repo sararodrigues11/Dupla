@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">It is considered the world capital of fashion, with iconic brands such as Chanel, Dior and Louis Vuitton</div>
-    <div class="box-line-2">Its motto is "Freedom, Equality, Fraternity"</div>
-    <div class="box-line-3">It houses one of the best-known works, “Mona Lisa”</div>
+    <div class="box-line-1">It is considered the country of video games</div>
+    <div class="box-line-2">Country of Origami</div>
+    <div class="box-line-3">Largest K-Pop culture in the world</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -61,7 +61,7 @@
             });
     
             
-            const correctCountry = "france";  
+            const correctCountry = ["japan", "Japan", "Japão", "japão"];   
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,9 +83,9 @@
             function checkAnswer() {
                 const userAnswer = userAnswerInput.value.trim().toLowerCase();
                 if (userAnswer === correctCountry.toLowerCase()) {
-                    alert("Correct! The country is France!");
+                    alert("Correct! The country is Japan!");
                    
-                    window.location.href = "italy.html";
+                    window.location.href = "pergunta6.html";
                 } else {
                     alert("Oops! Try again.");
                 }
@@ -97,7 +97,7 @@
                 alert("Going to previous question...");
             
             }
-        </script>  
+        </script>
 
 </body>
 </html>

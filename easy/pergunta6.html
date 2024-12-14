@@ -11,13 +11,13 @@
 <body>
 
     <div class="text-container">
-        <h2>Guess the Country!</h2> 
+        <h2>Guess the Country!</h2>
     </div>
 
 
-    <div class="box-line-1">City where William Shakespeare was born</div>
-    <div class="box-line-2">The great wizards emerged here</div>
-    <div class="box-line-3">Where you can ride the iconic red buses</div>
+    <div class="box-line-1">Its gastronomy is famous for dishes such as tacos</div>
+    <div class="box-line-2">It is famous for its wrestling fighters, known for wearing colorful masks</div>
+    <div class="box-line-3">Celebrates "Día de los Muertos", a festival that honors ancestors</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -61,7 +61,7 @@
             });
     
             
-            const correctCountry = ["england","uk", "united kingdom"];  
+            const correctCountry = ["mexico", "méxico", "Mexico", "México"];  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -82,10 +82,10 @@
            
             function checkAnswer() {
                 const userAnswer = userAnswerInput.value.trim().toLowerCase();
-                if (correctCountry.includes(userAnswer)) {
-                    alert("Correct! The country is England!");
+                if (userAnswer === correctCountry.toLowerCase()) {
+                    alert("Correct! The country is Mexico!");
                    
-                    window.location.href = "france.html";
+                    window.location.href = "pergunta7.html";
                 } else {
                     alert("Oops! Try again.");
                 }
@@ -97,7 +97,7 @@
                 alert("Going to previous question...");
             
             }
-        </script>  
+        </script>
 
 </body>
 </html>

@@ -15,9 +15,9 @@
     </div>
 
 
-    <div class="box-line-1">Contains one of the greatest martial arts, “Kung Fu”</div>
-    <div class="box-line-2">3rd largest country in the world, with 1.4 billion inhabitants</div>
-    <div class="box-line-3">It has one of the largest construction walls on earth</div>
+    <div class="box-line-1">Country of pasta and pizza</div>
+    <div class="box-line-2">They have one of the best-known sources of desire in the world</div>
+    <div class="box-line-3">Known for ancient remains, such as the Colosseum and the Roman Forum</div>
 
 <div class="answer-box">
     <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -26,7 +26,7 @@
          <div class="button-container">
             <button class="btn" id="prevButton">Previous</button>
             <button class="btn" id="hintButton">Hint</button>
-            <button class="btn" id="nextButton">Next</button>            
+            <button class="btn" id="nextButton">Next</button>
         </div>
 
         <script>
@@ -61,7 +61,7 @@
             });
     
             
-            const correctCountry = "china";  
+            const correctCountry = ["italy", "Italy", "itália", "Itália"];  
     
             
             const userAnswerInput = document.getElementById("userAnswer");
@@ -83,9 +83,9 @@
             function checkAnswer() {
                 const userAnswer = userAnswerInput.value.trim().toLowerCase();
                 if (userAnswer === correctCountry.toLowerCase()) {
-                    alert("Correct! The country is China!");
+                    alert("Correct! The country is Italy!");
                    
-                    window.location.href = "england.html";
+                    window.location.href = "pergunta5.html";
                 } else {
                     alert("Oops! Try again.");
                 }
