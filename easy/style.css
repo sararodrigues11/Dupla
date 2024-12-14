@@ -172,5 +172,32 @@ h2 {
   .btn {
     width: 100%; 
     font-size: 14px; 
-  }
+  }/* Botão para controlar a música */
+#controlador-musica {
+  position: fixed; /* Fixa a posição no ecrã */
+  bottom: 10px; /* 10px a partir do fundo */
+  right: 10px; /* 10px a partir da direita */
+  z-index: 1000; /* Garante que o botão fica acima de outros elementos */
+}
+
+#botao-musica {
+  background-color: #40798C; 
+  color: #F6F1D1;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%; /* Torna o botão redondo */
+  width: 60px; /* Tamanho do botão */
+  height: 60px;
+  text-align: center;
+  line-height: 60px; /* Centraliza o ícone verticalmente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#botao-musica:hover {
+  background-color: #70A9A1;
+  transform: scale(1.1);
+}
+
 }

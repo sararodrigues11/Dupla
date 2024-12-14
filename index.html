@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Guess the country!</title>
-
-
+    <title>Guess the Country!</title>
     <link rel="stylesheet" href="easy/style.css">
 </head>
 <body>
+    <!-- Controlo da Música -->
+    <audio id="musica-fundo" autoplay loop>
+        <source src="easy/song.mp3" type="audio/mp3">
+    </audio>
+    
 
+    <!-- Botão para controlar a música -->
+    <div id="controlador-musica">
+        <button id="botao-musica">🔊</button>
+    </div>
+
+    <!-- Conteúdo principal -->
     <div class="text-container">
         <h2>Guess the Country!</h2>
     </div>
-    
-</div>
 
-<div class="button-container">
-    <a href="easy/pergunta.html">
-    <button class="btn">Start</button>
-    </a>
-</div>
+    <div class="button-container">
+        <a href="easy/pergunta.html">
+            <button class="btn">Start</button>
+        </a>
+    </div>
 
     <script src="easy/script.js"></script> 
 </body>
