@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitória!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0B2027;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #ff0;
+            }
+            100% {
+                text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+            }
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .fireworks {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Congratulations, you won!!!</h1>
+        <button class="button" id="replay-button">Play Again</button>
+    </div>
+    <canvas class="fireworks" id="fireworks"></canvas>
+
+    <script>
+        const button = document.getElementById("replay-button");
+        const canvas = document.getElementById("fireworks");
+        const ctx = canvas.getContext("2d");
+
+        // Configurar dimensões do canvas
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Função de animação de fogos de artifício
+        const particles = [];
+
+        function Particle(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.size = Math.random() * 5 + 2;
+            this.speedX = Math.random() * 4 - 2;
+            this.speedY = Math.random() * 4 - 2;
+            this.alpha = 1;
+        }
+
+        Particle.prototype.update = function () {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.alpha -= 0.02;
+        };
+
+        Particle.prototype.draw = function () {
+            ctx.globalAlpha = this.alpha;
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        };
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((particle, index) => {
+                particle.update();
+                particle.draw();
+                if (particle.alpha <= 0) particles.splice(index, 1);
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        function createParticles(x, y) {
+            const colors = ["#ff0", "#f00", "#0f0", "#00f"];
+            for (let i = 0; i < 30; i++) {
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                particles.push(new Particle(x, y, color));
+            }
+        }
+
+        canvas.addEventListener("click", (e) => {
+            createParticles(e.clientX, e.clientY);
+        });
+
+        animateParticles();
+
+        // Ação do botão para reiniciar
+        button.addEventListener("click", () => {
+            window.location.reload(); // Recarrega a página para "reiniciar" o jogo
+        });
+
+    </script>
+</body>
+</html>

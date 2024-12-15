@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Guess the country!</title>
+
+
+    <link rel="stylesheet" href="../easy/style.css">
+</head>
+<body>
+
+    <div class="text-container">
+        <h2>Guess the Country!</h2> 
+    </div>
+
+
+    <div class="box-line-1">It is located in southwestern Europe, bordering Greece, Montenegro and Kosovo</div>
+    <div class="box-line-2">Tirana is the capital and largest city of this country, known for its colorful architecture and vibrant cultural and social life</div>
+    <div class="box-line-3">It is famous for its hospitality, and the citizens are known to be very welcoming to visitors</div>
+
+<div class="answer-box">
+    <input type="text" id="userAnswer" placeholder="Type your guess here..." />
+</div>
+    
+         <div class="button-container">
+            <button class="btn" id="prevButton">Previous</button>
+            <button class="btn" id="hintButton">Hint</button>
+            <button class="btn" id="nextButton">Next</button>
+        </div>
+
+
+        <script>
+            console.log("Hello, World!");
+    
+           
+            const hintButton = document.getElementById('hintButton');
+            const line2 = document.querySelector('.box-line-2'); 
+            const line3 = document.querySelector('.box-line-3'); 
+    
+            
+            let hintClicks = 0;
+    
+            
+            hintButton.addEventListener('click', function() {
+                hintClicks++; 
+    
+                
+                if (hintClicks === 1) {
+                    line2.style.display = 'block'; 
+                    console.log("First click: Line 2 is now visible!");
+                }
+                
+                else if (hintClicks === 2) {
+                    line3.style.display = 'block';  
+                    console.log("Second click: Line 3 is now visible!");
+                }
+                
+                else {
+                    console.log("Hint button clicked, but lines are already visible.");
+                }
+            });
+    
+            
+            const correctCountry = ["albania", "albânia", "Albania", "Albânia"];   
+    
+            
+            const userAnswerInput = document.getElementById("userAnswer");
+            const nextButton = document.getElementById("nextButton");
+            const prevButton = document.getElementById("prevButton");
+    
+            
+            nextButton.addEventListener("click", checkAnswer);
+            prevButton.addEventListener("click", previousQuestion);
+    
+            
+            userAnswerInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    checkAnswer();  
+                }
+            });
+    
+                
+                    function checkAnswer() {
+            const userAnswer = userAnswerInput.value.trim().toLowerCase();
+            if (userAnswer === correctCountry.toLowerCase()) {
+                alert("Correct! The country is Albania!");
+                
+                setTimeout(function() {
+                    window.location.href = "../hard/question25.html";
+                }, 1000);
+            } else {
+                alert("Oops! Try again.");
+            }
+            userAnswerInput.value = ""; 
+        }
+
+           
+            function previousQuestion() {
+                alert("Going to previous question...");
+            
+            }
+        </script>
+
+</body>
+</html>
