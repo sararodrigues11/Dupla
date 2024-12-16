@@ -10,8 +10,9 @@
             padding: 0;
             background-color: #0B2027;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: "Roboto Slab", serif; 
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -38,6 +39,7 @@
             margin-top: 20px;
             background-color: #444;
             color: #fff;
+            font-family: "Roboto Slab", serif; 
             padding: 10px 20px;
             border: 2px solid #fff;
             border-radius: 5px;
@@ -57,12 +59,29 @@
             height: 100%;
             pointer-events: none;
         }
+
+        .credit {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #F6F1D1;
+            font-family: "Roboto Slab", serif;
+            opacity: 0.7;
+        }
+
+        .credit p {
+            margin: 0;
+            font-style: italic;
+            text-align: center; 
+        }
     </style>
 </head>
 <body>
     <div>
         <h1>Congratulations, you won!!!</h1>
         <button class="button" id="replay-button">Play Again</button>
+        <div class="credit">
+            <p>Made by Rita and Sara</p>
+        </div>
     </div>
     <canvas class="fireworks" id="fireworks"></canvas>
 
@@ -71,11 +90,9 @@
         const canvas = document.getElementById("fireworks");
         const ctx = canvas.getContext("2d");
 
-        
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-       
         const particles = [];
 
         function Particle(x, y, color) {
@@ -126,11 +143,9 @@
 
         animateParticles();
 
-        
         button.addEventListener("click", () => {
             window.location.href = "../index.html"; 
         });
-
     </script>
 </body>
 </html>

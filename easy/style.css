@@ -73,21 +73,7 @@ h2 {
   gap: 20px;
 }
 
-.box-line-2,
-.box-line-3 {
-  display: none; 
-}
-
-.box-line-1 {
-  background-color: #F6F1D1;
-  color: #0B2027;
-  border-radius: 5px;
-  padding: 10px 200px;
-  margin: 10px;
-  font-family: "Roboto Slab", serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
+.box-line-1,
 .box-line-2,
 .box-line-3 {
   background-color: #F6F1D1;
@@ -116,9 +102,7 @@ h2 {
   background-color: #70A9A1;
 }
 
-
 @media (max-width: 768px) {
-  
   h2 {
     font-size: 28px; 
   }
@@ -153,7 +137,6 @@ h2 {
 }
 
 @media (max-width: 480px) {
- 
   h2 {
     font-size: 24px; 
   }
@@ -173,6 +156,15 @@ h2 {
     width: 100%; 
     font-size: 14px; 
   }
+
+  #controlador-musica {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px; 
+    z-index: 1000; 
+  }
+}
+
 #controlador-musica {
   position: fixed; 
   bottom: 10px; 
@@ -192,12 +184,25 @@ h2 {
   text-align: center;
   line-height: 60px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
-  transition: background-color 0.3s ease, transform 0.2s;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 #botao-musica:hover {
   background-color: #70A9A1;
   transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
+.credit {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #F6F1D1;
+  font-family: "Roboto Slab", serif;
+  opacity: 0.7; 
+}
+
+.credit p {
+  margin: 0;
+  font-style: italic;
 }
