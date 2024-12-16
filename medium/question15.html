@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Guess the country!</title>
+    <title>Guess the Country!</title>
     <link rel="stylesheet" href="../easy/style.css">
 </head>
 <body>
+
+    
+    <audio id="musica-fundo" loop>
+        <source src="../easy/song.mp3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    
+    <button id="botao-musica">🔊</button>
 
     <div class="text-container">
         <h2>Guess the Country!</h2> 
     </div>
 
-  
     <div class="box-line-1">Shakira is one of the world-renowned singers, who was born in this country</div>
     <div class="box-line-2" style="display: none;">It is the only country in South America that has coastlines on both the Pacific Ocean and the Caribbean Sea</div>
     <div class="box-line-3" style="display: none;">Its capital is Bogotá</div>
 
-   
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
     </div>
-    
     
     <div class="button-container">
         <button class="btn" id="prevButton">Previous</button>
@@ -32,7 +38,7 @@
     <script>
         console.log("Hello, World!");
 
-        // Variables for hints
+     
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
@@ -83,11 +89,40 @@
             }
             userAnswerInput.value = "";  
         }
+
+     
         function previousQuestion() {
             window.history.back(); 
         }
+        const musica = document.getElementById("musica-fundo");
+        const botaoMusica = document.getElementById("botao-musica");
+        let musicaLigada = true;
+
+        botaoMusica.addEventListener("click", () => {
+            if (musicaLigada) {
+                musica.pause(); 
+                botaoMusica.innerHTML = "🔇"; 
+            } else {
+                musica.play(); 
+                botaoMusica.innerHTML = "🔊"; 
+            }
+            musicaLigada = !musicaLigada; 
+        });
+
+       
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                musica.play(); 
+            }, 100); 
+        });
+
+  
+        musica.addEventListener('error', () => {
+            console.error("Error loading audio. Please check the file path.");
+        });
 
     </script>
 
 </body>
 </html>
+

@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="../easy/style.css">
 </head>
 <body>
-
+    <audio id="musica-fundo" loop>
+        <source src="../easy/song.mp3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+   
+    
+    <button id="botao-musica">🔊</button>
     <div class="text-container">
         <h2>Guess the Country!</h2> 
     </div>
@@ -95,6 +101,32 @@
         function previousQuestion() {
             window.history.back(); 
         }
+        const musica = document.getElementById("musica-fundo");
+        const botaoMusica = document.getElementById("botao-musica");
+        let musicaLigada = true;
+
+        botaoMusica.addEventListener("click", () => {
+            if (musicaLigada) {
+                musica.pause(); 
+                botaoMusica.innerHTML = "🔇"; 
+            } else {
+                musica.play(); 
+                botaoMusica.innerHTML = "🔊"; 
+            }
+            musicaLigada = !musicaLigada; 
+        });
+
+       
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                musica.play(); 
+            }, 100); 
+        });
+
+  
+        musica.addEventListener('error', () => {
+            console.error("Error loading audio. Please check the file path.");
+        });
 
     </script>
 

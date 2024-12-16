@@ -28,7 +28,7 @@
     </div>
 
     
-    <audio id="musica-fundo" src="your-audio-file.mp3" loop></audio>
+    <audio id="musica-fundo" src="song.mp3.mp3" loop></audio>
     <button id="botao-musica">🔊</button>
 
     <script>
@@ -83,7 +83,6 @@
             window.history.back(); 
         }
 
-        
         const musica = document.getElementById("musica-fundo");
         const botaoMusica = document.getElementById("botao-musica");
         let musicaLigada = true;
@@ -97,6 +96,16 @@
                 botaoMusica.innerHTML = "🔊"; 
             }
             musicaLigada = !musicaLigada; 
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                musica.play(); 
+            }, 100); 
+        });
+
+        musica.addEventListener('error', () => {
+            console.error("Error loading audio. Please check the file path.");
         });
     </script>  
 

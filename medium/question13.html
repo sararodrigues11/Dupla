@@ -8,21 +8,27 @@
 </head>
 <body>
 
+
+    <audio id="musica-fundo" loop>
+        <source src="../easy/song.mp3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Button to control audio (play/pause) -->
+    <button id="botao-musica">🔊</button>
+
     <div class="text-container">
         <h2>Guess the Country!</h2> 
     </div>
 
-   
     <div class="box-line-1">It is the only country that occupies an entire continent and is surrounded by oceans</div>
     <div class="box-line-2" style="display: none;">Known for its “giant” animals</div>
     <div class="box-line-3" style="display: none;">Famous because kangaroos and koalas live there</div>
 
-    
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
     </div>
-    
-   
+
     <div class="button-container">
         <button class="btn" id="prevButton">Previous</button>
         <button class="btn" id="hintButton">Hint</button>
@@ -30,32 +36,22 @@
     </div>
 
     <script>
-        console.log("Hello, World!");
-
-        
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
         let hintClicks = 0;
 
-        
         hintButton.addEventListener('click', function() {
             hintClicks++; 
 
             if (hintClicks === 1) {
                 line2.style.display = 'block'; 
-                console.log("First click: Line 2 is now visible!");
             }
             else if (hintClicks === 2) {
                 line3.style.display = 'block';  
-                console.log("Second click: Line 3 is now visible!");
-            }
-            else {
-                console.log("Hint button clicked, but lines are already visible.");
             }
         });
 
-        
         const correctCountry = ["australia", "Australia", "austrália", "Austrália"];  
         const userAnswerInput = document.getElementById("userAnswer");
         const nextButton = document.getElementById("nextButton");
@@ -69,7 +65,6 @@
             }
         });
 
-        
         function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
@@ -83,12 +78,39 @@
             }
             userAnswerInput.value = "";  
         }
-
         function previousQuestion() {
             window.history.back(); 
         }
+
+        const musica = document.getElementById("musica-fundo");
+        const botaoMusica = document.getElementById("botao-musica");
+        let musicaLigada = true;
+
+        botaoMusica.addEventListener("click", () => {
+            if (musicaLigada) {
+                musica.pause(); 
+                botaoMusica.innerHTML = "🔇"; 
+            } else {
+                musica.play(); 
+                botaoMusica.innerHTML = "🔊"; 
+            }
+            musicaLigada = !musicaLigada; 
+        });
+
+       
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                musica.play(); 
+            }, 100); 
+        });
+
+  
+        musica.addEventListener('error', () => {
+            console.error("Error loading audio. Please check the file path.");
+        });
 
     </script>
 
 </body>
 </html>
+
