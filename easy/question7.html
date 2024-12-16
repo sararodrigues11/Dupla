@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Guess the country!</title>
-
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,109 +12,92 @@
         <h2>Guess the Country!</h2>
     </div>
 
-
     <div class="box-line-1">Its gastronomy is famous for dishes such as tacos</div>
     <div class="box-line-2">It is famous for its wrestling fighters, known for wearing colorful masks</div>
     <div class="box-line-3">Celebrates "Día de los Muertos", a festival that honors ancestors</div>
 
-<div class="answer-box">
-    <input type="text" id="userAnswer" placeholder="Type your guess here..." />
-</div>
+    <div class="answer-box">
+        <input type="text" id="userAnswer" placeholder="Type your guess here..." />
+    </div>
     
-         <div class="button-container">
-            <button class="btn" id="prevButton">Previous</button>
-            <button class="btn" id="hintButton">Hint</button>
-            <button class="btn" id="nextButton">Next</button>
-        </div>
+    <div class="button-container">
+        <button class="btn" id="prevButton">Previous</button>
+        <button class="btn" id="hintButton">Hint</button>
+        <button class="btn" id="nextButton">Next</button>
+    </div>
 
-        <script>
-            console.log("Hello, World!");
-    
-           
-            const hintButton = document.getElementById('hintButton');
-            const line2 = document.querySelector('.box-line-2'); 
-            const line3 = document.querySelector('.box-line-3'); 
-    
-            
-            let hintClicks = 0;
-    
-            
-            hintButton.addEventListener('click', function() {
-                hintClicks++; 
-    
-                
-                if (hintClicks === 1) {
-                    line2.style.display = 'block'; 
-                    console.log("First click: Line 2 is now visible!");
-                }
-                
-                else if (hintClicks === 2) {
-                    line3.style.display = 'block';  
-                    console.log("Second click: Line 3 is now visible!");
-                }
-                
-                else {
-                    console.log("Hint button clicked, but lines are already visible.");
-                }
-            });
-    
-            
-            const correctCountry = ["mexico", "méxico", "Mexico", "México"];  
-    
-            
-            const userAnswerInput = document.getElementById("userAnswer");
-            const nextButton = document.getElementById("nextButton");
-            const prevButton = document.getElementById("prevButton");
-    
-            
-            nextButton.addEventListener("click", checkAnswer);
-            prevButton.addEventListener("click", previousQuestion);
-    
-            
-            userAnswerInput.addEventListener("keypress", function(event) {
-                if (event.key === "Enter") {
-                    checkAnswer();  
-                }
-            });
-    
-           
-            function checkAnswer() {
-                const userAnswer = userAnswerInput.value.trim().toLowerCase();
-                if (userAnswer === correctCountry.toLowerCase()) {
-                    alert("Correct! The country is Mexico!");
-                   
-                    window.location.href = "question8.html";
-                } else {
-                    alert("Oops! Try again.");
-                }
-                userAnswerInput.value = "";
+    <!-- Audio control -->
+    <audio id="musica-fundo" src="your-audio-file.mp3" loop></audio>
+    <button id="botao-musica">🔊</button>
+
+    <script>
+        console.log("Hello, World!");
+        
+        const hintButton = document.getElementById('hintButton');
+        const line2 = document.querySelector('.box-line-2'); 
+        const line3 = document.querySelector('.box-line-3'); 
+        let hintClicks = 0;
+
+        hintButton.addEventListener('click', function() {
+            hintClicks++; 
+
+            if (hintClicks === 1) {
+                line2.style.display = 'block'; 
+                console.log("First click: Line 2 is now visible!");
             }
-    
-           
-            function previousQuestion() {
-                alert("Going to previous question...");
-            
+            else if (hintClicks === 2) {
+                line3.style.display = 'block';  
+                console.log("Second click: Line 3 is now visible!");
             }
-            // Seleciona o elemento <audio> e o botão
-const musica = document.getElementById("musica-fundo");
-const botaoMusica = document.getElementById("botao-musica");
+            else {
+                console.log("Hint button clicked, but lines are already visible.");
+            }
+        });
 
-// Variável de controlo
-let musicaLigada = true;
+        const correctCountry = ["mexico", "méxico", "Mexico", "México"];   
+        const userAnswerInput = document.getElementById("userAnswer");
+        const nextButton = document.getElementById("nextButton");
+        const prevButton = document.getElementById("prevButton");
 
-// Adiciona o evento de clique
-botaoMusica.addEventListener("click", () => {
-    if (musicaLigada) {
-        musica.pause(); // Pausa a música
-        botaoMusica.innerHTML = "🔇"; // Ícone de som desligado
-    } else {
-        musica.play(); // Retoma a música
-        botaoMusica.innerHTML = "🔊"; // Ícone de som ligado
-    }
-    musicaLigada = !musicaLigada; // Alterna o estado
-});
+        nextButton.addEventListener("click", checkAnswer);
+        prevButton.addEventListener("click", previousQuestion);
+        userAnswerInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkAnswer();  
+            }
+        });
 
-        </script>
+        function checkAnswer() {
+            const userAnswer = userAnswerInput.value.trim().toLowerCase();
+            if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
+                alert("Correct! The country is Mexico!");
+                window.location.href = "question8.html";  // Redirect to the next question
+            } else {
+                alert("Oops! Try again.");
+            }
+            userAnswerInput.value = "";
+        }
+
+        function previousQuestion() {
+            alert("Going to previous question...");
+        }
+
+        // Audio control
+        const musica = document.getElementById("musica-fundo");
+        const botaoMusica = document.getElementById("botao-musica");
+        let musicaLigada = true;
+
+        botaoMusica.addEventListener("click", () => {
+            if (musicaLigada) {
+                musica.pause(); // Pause the music
+                botaoMusica.innerHTML = "🔇"; // Mute icon
+            } else {
+                musica.play(); // Play the music
+                botaoMusica.innerHTML = "🔊"; // Unmute icon
+            }
+            musicaLigada = !musicaLigada; // Toggle the state
+        });
+    </script>  
 
 </body>
 </html>

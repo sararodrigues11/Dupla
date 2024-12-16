@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Guess the country!</title>
-
-
     <link rel="stylesheet" href="../easy/style.css">
 </head>
 <body>
@@ -14,93 +12,84 @@
         <h2>Guess the Country!</h2> 
     </div>
 
-
+    <!-- Clue Lines -->
     <div class="box-line-1">Shakira is one of the world-renowned singers, who was born in this country</div>
-    <div class="box-line-2">It is the only country in South America that has coastlines on both the Pacific Ocean and the Caribbean Sea</div>
-    <div class="box-line-3">Its capital is Bogotá</div>
+    <div class="box-line-2" style="display: none;">It is the only country in South America that has coastlines on both the Pacific Ocean and the Caribbean Sea</div>
+    <div class="box-line-3" style="display: none;">Its capital is Bogotá</div>
 
-<div class="answer-box">
-    <input type="text" id="userAnswer" placeholder="Type your guess here..." />
-</div>
+    <!-- Answer Input -->
+    <div class="answer-box">
+        <input type="text" id="userAnswer" placeholder="Type your guess here..." />
+    </div>
     
-         <div class="button-container">
-            <button class="btn" id="prevButton">Previous</button>
-            <button class="btn" id="hintButton">Hint</button>
-            <button class="btn" id="nextButton">Next</button>
-        </div>
+    <!-- Button Container -->
+    <div class="button-container">
+        <button class="btn" id="prevButton">Previous</button>
+        <button class="btn" id="hintButton">Hint</button>
+        <button class="btn" id="nextButton">Next</button>
+    </div>
 
- 
-        <script>
-            console.log("Hello, World!");
-    
-           
-            const hintButton = document.getElementById('hintButton');
-            const line2 = document.querySelector('.box-line-2'); 
-            const line3 = document.querySelector('.box-line-3'); 
-    
-            
-            let hintClicks = 0;
-    
-            
-            hintButton.addEventListener('click', function() {
-                hintClicks++; 
-    
-                
-                if (hintClicks === 1) {
-                    line2.style.display = 'block'; 
-                    console.log("First click: Line 2 is now visible!");
-                }
-                
-                else if (hintClicks === 2) {
-                    line3.style.display = 'block';  
-                    console.log("Second click: Line 3 is now visible!");
-                }
-                
-                else {
-                    console.log("Hint button clicked, but lines are already visible.");
-                }
-            });
-    
-            
-            const correctCountry = ["colombia", "Colombia", "colômbia", "Colômbia"];  
-    
-            
-            const userAnswerInput = document.getElementById("userAnswer");
-            const nextButton = document.getElementById("nextButton");
-            const prevButton = document.getElementById("prevButton");
-    
-            
-            nextButton.addEventListener("click", checkAnswer);
-            prevButton.addEventListener("click", previousQuestion);
-    
-            
-            userAnswerInput.addEventListener("keypress", function(event) {
-                if (event.key === "Enter") {
-                    checkAnswer();  
-                }
-            });
-    
-                
-                    function checkAnswer() {
+    <script>
+        console.log("Hello, World!");
+
+        // Variables for hints
+        const hintButton = document.getElementById('hintButton');
+        const line2 = document.querySelector('.box-line-2'); 
+        const line3 = document.querySelector('.box-line-3'); 
+        let hintClicks = 0;
+
+        // Handle hint button clicks
+        hintButton.addEventListener('click', function() {
+            hintClicks++; 
+
+            if (hintClicks === 1) {
+                line2.style.display = 'block'; // Show line 2
+                console.log("First click: Line 2 is now visible!");
+            }
+            else if (hintClicks === 2) {
+                line3.style.display = 'block';  // Show line 3
+                console.log("Second click: Line 3 is now visible!");
+            }
+            else {
+                console.log("Hint button clicked, but lines are already visible.");
+            }
+        });
+
+        // Correct Country Names
+        const correctCountry = ["colombia", "Colombia", "colômbia", "Colômbia"];  
+        const userAnswerInput = document.getElementById("userAnswer");
+        const nextButton = document.getElementById("nextButton");
+        const prevButton = document.getElementById("prevButton");
+
+        nextButton.addEventListener("click", checkAnswer);
+        prevButton.addEventListener("click", previousQuestion);
+        userAnswerInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkAnswer();  
+            }
+        });
+
+        // Function to check the user's answer
+        function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
-            if (userAnswer === correctCountry.toLowerCase()) {
+            // Use .some() to check if the answer matches any correct country
+            if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
                 alert("Correct! The country is Colombia!");
-                
+
                 setTimeout(function() {
-                    window.location.href = "../medium/question16.html";
+                    window.location.href = "../medium/question16.html";  // Redirect to next question
                 }, 1000);
             } else {
                 alert("Oops! Try again.");
             }
-            userAnswerInput.value = ""; 
+            userAnswerInput.value = "";  // Clear the input field
         }
 
-           
-            function previousQuestion() {
-                alert("Going to previous question...");
-            
-            }
-        </script>
+        // Function for the "Previous" button (can be customized further)
+        function previousQuestion() {
+            alert("Going to previous question...");
+        }
+    </script>
 
 </body>
 </html>
