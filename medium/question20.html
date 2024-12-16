@@ -30,22 +30,22 @@
     <script>
         console.log("Hello, World!");
 
-        // Variables for hint functionality
+   
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
         let hintClicks = 0;
 
-        // Show hints based on the number of clicks
+    
         hintButton.addEventListener('click', function() {
             hintClicks++; 
 
             if (hintClicks === 1) {
-                line2.style.display = 'block'; // Show line 2
+                line2.style.display = 'block';
                 console.log("First click: Line 2 is now visible!");
             }
             else if (hintClicks === 2) {
-                line3.style.display = 'block';  // Show line 3
+                line3.style.display = 'block';  
                 console.log("Second click: Line 3 is now visible!");
             }
             else {
@@ -53,32 +53,32 @@
             }
         });
 
-        // Correct country names (case insensitive)
+   
         const correctCountry = ["jamaica", "Jamaica"];  
         const userAnswerInput = document.getElementById("userAnswer");
         const nextButton = document.getElementById("nextButton");
         const prevButton = document.getElementById("prevButton");
 
-        // Event listeners for buttons
+
         nextButton.addEventListener("click", checkAnswer);
         prevButton.addEventListener("click", previousQuestion);
 
-        // Enter key support
+        
         userAnswerInput.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 checkAnswer();  
             }
         });
 
-        // Check if the user's answer matches the correct country
+       
         function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
 
-            // Use .some() to check if the answer matches any element in the correctCountry array
+       
             if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
                 alert("Correct! The country is Jamaica!");
 
-                // Redirect to the next question after 1 second
+              
                 setTimeout(function() {
                     window.location.href = "../medium/question21.html";
                 }, 1000);
@@ -86,10 +86,10 @@
                 alert("Oops! Try again.");
             }
 
-            userAnswerInput.value = "";  // Clear the input field
+            userAnswerInput.value = "";  
         }
 
-        // Handle previous question button (could be customized further)
+ 
         function previousQuestion() {
             alert("Going to previous question...");
         }

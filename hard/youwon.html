@@ -71,11 +71,11 @@
         const canvas = document.getElementById("fireworks");
         const ctx = canvas.getContext("2d");
 
-        // Configurar dimensões do canvas
+        
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        // Função de animação de fogos de artifício
+        
         const particles = [];
 
         function Particle(x, y, color) {
@@ -126,9 +126,9 @@
 
         animateParticles();
 
-        // Ação do botão para reiniciar
+        
         button.addEventListener("click", () => {
-            window.location.reload(); // Recarrega a página para "reiniciar" o jogo
+            window.location.reload(); 
         });
 
     </script>
