@@ -92,11 +92,11 @@
                 userAnswerInput.value = "";
             }
     
-           
             function previousQuestion() {
-                alert("Going to previous question...");
-            
-            }
+            window.history.back(); 
+        }
+
+
             // Seleciona o elemento <audio> e o botão
 const musica = document.getElementById("musica-fundo");
 const botaoMusica = document.getElementById("botao-musica");

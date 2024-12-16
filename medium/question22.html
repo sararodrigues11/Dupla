@@ -89,13 +89,13 @@
                 alert("Oops! Try again.");
             }
 
-            userAnswerInput.value = "";  // Clear the input field
+            userAnswerInput.value = ""; 
         }
 
-        // Handle previous question button (could be customized further)
         function previousQuestion() {
-            alert("Going to previous question...");
+            window.history.back(); 
         }
+
     </script>
 
 </body>
