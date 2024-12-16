@@ -26,7 +26,7 @@
         <button class="btn" id="nextButton">Next</button>
     </div>
 
-    <!-- Audio control -->
+   
     <audio id="musica-fundo" src="your-audio-file.mp3" loop></audio>
     <button id="botao-musica">🔊</button>
 
@@ -81,20 +81,20 @@
             window.history.back(); 
         }
 
-        // Audio control
+        
         const musica = document.getElementById("musica-fundo");
         const botaoMusica = document.getElementById("botao-musica");
         let musicaLigada = true;
 
         botaoMusica.addEventListener("click", () => {
             if (musicaLigada) {
-                musica.pause(); // Pause the music
-                botaoMusica.innerHTML = "🔇"; // Mute icon
+                musica.pause(); 
+                botaoMusica.innerHTML = "🔇"; 
             } else {
-                musica.play(); // Play the music
-                botaoMusica.innerHTML = "🔊"; // Unmute icon
+                musica.play(); 
+                botaoMusica.innerHTML = "🔊"; 
             }
-            musicaLigada = !musicaLigada; // Toggle the state
+            musicaLigada = !musicaLigada; 
         });
     </script>  
 

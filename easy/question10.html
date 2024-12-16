@@ -28,7 +28,7 @@
         <button class="btn" id="nextButton">Next</button>
     </div>
 
-    <!-- Audio control -->
+    
     <audio id="musica-fundo" src="your-audio-file.mp3" loop></audio>
     <button id="botao-musica">🔊</button>
 
@@ -40,16 +40,16 @@
         const line3 = document.querySelector('.box-line-3'); 
         let hintClicks = 0;
 
-        // Handle hint button clicks
+        
         hintButton.addEventListener('click', function() {
             hintClicks++; 
 
             if (hintClicks === 1) {
-                line2.style.display = 'block'; // Show line 2
+                line2.style.display = 'block'; 
                 console.log("First click: Line 2 is now visible!");
             }
             else if (hintClicks === 2) {
-                line3.style.display = 'block';  // Show line 3
+                line3.style.display = 'block';  
                 console.log("Second click: Line 3 is now visible!");
             }
             else {
@@ -70,36 +70,37 @@
             }
         });
 
-        // Function to check the user's answer
+        
         function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
                 alert("Correct! The country is USA!");
-                window.location.href = "question11.html";  // Redirect to next question
+                window.location.href = "question11.html";  
             } else {
                 alert("Oops! Try again.");
             }
-            userAnswerInput.value = "";  // Clear the input field
+            userAnswerInput.value = "";  
         }
+
+        
         function previousQuestion() {
             window.history.back(); 
         }
 
-
-        // Audio control functionality
+        
         const musica = document.getElementById("musica-fundo");
         const botaoMusica = document.getElementById("botao-musica");
         let musicaLigada = true;
 
         botaoMusica.addEventListener("click", () => {
             if (musicaLigada) {
-                musica.pause(); // Pause the music
-                botaoMusica.innerHTML = "🔇"; // Mute icon
+                musica.pause(); 
+                botaoMusica.innerHTML = "🔇"; 
             } else {
-                musica.play(); // Play the music
-                botaoMusica.innerHTML = "🔊"; // Unmute icon
+                musica.play(); 
+                botaoMusica.innerHTML = "🔊"; 
             }
-            musicaLigada = !musicaLigada; // Toggle the state
+            musicaLigada = !musicaLigada; 
         });
     </script>
 

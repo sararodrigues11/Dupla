@@ -12,17 +12,17 @@
         <h2>Guess the Country!</h2> 
     </div>
 
-    <!-- Clue Lines -->
+    
     <div class="box-line-1">Country of Ice Hockey</div>
     <div class="box-line-2" style="display: none;">It has two official languages, French and English</div>
     <div class="box-line-3" style="display: none;">The flag has a drawn leaf</div>
 
-    <!-- Answer Input -->
+    
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
     </div>
     
-    <!-- Button Container -->
+  
     <div class="button-container">
         <button class="btn" id="prevButton">Previous</button>
         <button class="btn" id="hintButton">Hint</button>
@@ -32,22 +32,22 @@
     <script>
         console.log("Hello, World!");
 
-        // Variables for hints
+        
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
         let hintClicks = 0;
 
-        // Handle hint button clicks
+       
         hintButton.addEventListener('click', function() {
             hintClicks++; 
 
             if (hintClicks === 1) {
-                line2.style.display = 'block'; // Show line 2
+                line2.style.display = 'block'; 
                 console.log("First click: Line 2 is now visible!");
             }
             else if (hintClicks === 2) {
-                line3.style.display = 'block';  // Show line 3
+                line3.style.display = 'block'; 
                 console.log("Second click: Line 3 is now visible!");
             }
             else {
@@ -55,7 +55,7 @@
             }
         });
 
-        // Correct Country Names
+       
         const correctCountry = ["canada", "Canada", "canadá", "Canadá"];  
         const userAnswerInput = document.getElementById("userAnswer");
         const nextButton = document.getElementById("nextButton");
@@ -69,19 +69,19 @@
             }
         });
 
-        // Function to check the user's answer
+        
         function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
                 alert("Correct! The country is Canada!");
 
                 setTimeout(function() {
-                    window.location.href = "../medium/question15.html";  // Redirect to next question
+                    window.location.href = "../medium/question15.html";  
                 }, 1000);
             } else {
                 alert("Oops! Try again.");
             }
-            userAnswerInput.value = "";  // Clear the input field
+            userAnswerInput.value = ""; 
         }
 
         function previousQuestion() {

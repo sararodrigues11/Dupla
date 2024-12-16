@@ -12,17 +12,17 @@
         <h2>Guess the Country!</h2> 
     </div>
 
-    <!-- Clue Lines -->
+    
     <div class="box-line-1">2nd largest country in South America</div>
     <div class="box-line-2" style="display: none;">Country where great football names such as Lionel Messi were born</div>
     <div class="box-line-3" style="display: none;">Its capital has “good air"</div>
 
-    <!-- Answer Input -->
+   
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
     </div>
     
-    <!-- Button Container -->
+    
     <div class="button-container">
         <button class="btn" id="prevButton">Previous</button>
         <button class="btn" id="hintButton">Hint</button>
@@ -32,13 +32,13 @@
     <script>
         console.log("Hello, World!");
 
-        // Variables for hints
+        
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
         let hintClicks = 0;
 
-        // Handle hint button clicks
+        
         hintButton.addEventListener('click', function() {
             hintClicks++; 
 
@@ -55,7 +55,7 @@
             }
         });
 
-        // Correct Country Names
+        
         const correctCountry = ["argentina", "Argentina"];  
         const userAnswerInput = document.getElementById("userAnswer");
         const nextButton = document.getElementById("nextButton");
@@ -69,19 +69,19 @@
             }
         });
 
-        // Function to check the user's answer
+        
         function checkAnswer() {
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
                 alert("Correct! The country is Argentina!");
 
                 setTimeout(function() {
-                    window.location.href = "../medium/question13.html";  // Redirect to next question
+                    window.location.href = "../medium/question13.html";  
                 }, 1000);
             } else {
                 alert("Oops! Try again.");
             }
-            userAnswerInput.value = "";  // Clear the input field
+            userAnswerInput.value = "";  
         }
 
         function previousQuestion() {
