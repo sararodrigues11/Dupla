@@ -13,29 +13,28 @@
     </div>
 
     <div class="box-line-1">City where William Shakespeare was born</div>
-    <div class="box-line-2">The great wizards emerged here</div>
-    <div class="box-line-3">Where you can ride the iconic red buses</div>
+    <div class="box-line-2" style="display:none;">The great wizards emerged here</div>
+    <div class="box-line-3" style="display:none;">Where you can ride the iconic red buses</div>
 
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
     </div>
     
     <div class="button-container">
-        <button class="btn" id="prevButton">Previous</button>
-        <button class="btn" id="hintButton">Hint</button>
-        <button class="btn" id="nextButton">Next</button>
+        <button type="button" class="btn" id="prevButton">Previous</button>
+        <button type="button" class="btn" id="hintButton">Hint</button>
+        <button type="button" class="btn" id="nextButton">Next</button>
     </div>
 
     <audio id="musica-fundo" loop>
         <source src="song.mp3.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    <button id="botao-musica">🔊</button>
+    <button type="button" id="botao-musica">🔊</button>
 
     <div class="credit">
         <p>Made by Rita and Sara</p>
     </div>
-
 
     <script>
         const hintButton = document.getElementById('hintButton');
@@ -47,8 +46,7 @@
             hintClicks++; 
             if (hintClicks === 1) {
                 line2.style.display = 'block'; 
-            }
-            else if (hintClicks === 2) {
+            } else if (hintClicks === 2) {
                 line3.style.display = 'block';  
             }
         });
@@ -72,7 +70,7 @@
             const userAnswer = userAnswerInput.value.trim().toLowerCase();
             if (correctCountry.includes(userAnswer)) {
                 alert("Correct! The country is England!");
-                window.location.href = "question4.html";
+                window.location.href = "question4.html"; 
             } else {
                 alert("Oops! Try again.");
             }

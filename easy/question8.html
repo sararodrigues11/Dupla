@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Guess the country!</title>
-
+    <title>Guess the Country!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,8 +13,8 @@
     </div>
 
     <div class="box-line-1">It is famous for its decorative blue tiles</div>
-    <div class="box-line-2">It was one of the main countries in the Age of Discoveries</div>
-    <div class="box-line-3">Where the best football player in the world was born</div>
+    <div class="box-line-2" style="display:none;">It was one of the main countries in the Age of Discoveries</div>
+    <div class="box-line-3" style="display:none;">Where the best football player in the world was born</div>
 
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -27,7 +26,6 @@
         <button class="btn" id="nextButton">Next</button>
     </div>
 
-    
     <audio id="musica-fundo" src="song.mp3.mp3" loop></audio>
     <button id="botao-musica">🔊</button>
 
@@ -35,10 +33,9 @@
         <p>Made by Rita and Sara</p>
     </div>
 
-
     <script>
         console.log("Hello, World!");
-        
+
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
@@ -54,6 +51,8 @@
             else if (hintClicks === 2) {
                 line3.style.display = 'block';  
                 console.log("Second click: Line 3 is now visible!");
+                hintButton.disabled = true; 
+                console.log("No more hints available.");
             }
             else {
                 console.log("Hint button clicked, but lines are already visible.");
@@ -88,7 +87,6 @@
             window.history.back(); 
         }
 
-        
         const musica = document.getElementById("musica-fundo");
         const botaoMusica = document.getElementById("botao-musica");
         let musicaLigada = true;

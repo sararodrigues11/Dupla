@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Guess the country!</title>
+    <title>Guess the Country!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
     </div>
 
     <div class="box-line-1">Its gastronomy is famous for dishes such as tacos</div>
-    <div class="box-line-2">It is famous for its wrestling fighters, known for wearing colorful masks</div>
-    <div class="box-line-3">Celebrates "Día de los Muertos", a festival that honors ancestors</div>
+    <div class="box-line-2" style="display:none;">It is famous for its wrestling fighters, known for wearing colorful masks</div>
+    <div class="box-line-3" style="display:none;">Celebrates "Día de los Muertos", a festival that honors ancestors</div>
 
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -26,7 +26,6 @@
         <button class="btn" id="nextButton">Next</button>
     </div>
 
-    
     <audio id="musica-fundo" src="song.mp3.mp3" loop></audio>
     <button id="botao-musica">🔊</button>
 
@@ -34,10 +33,9 @@
         <p>Made by Rita and Sara</p>
     </div>
 
-
     <script>
         console.log("Hello, World!");
-        
+
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
@@ -53,6 +51,8 @@
             else if (hintClicks === 2) {
                 line3.style.display = 'block';  
                 console.log("Second click: Line 3 is now visible!");
+                hintButton.disabled = true; 
+                console.log("No more hints available.");
             }
             else {
                 console.log("Hint button clicked, but lines are already visible.");
@@ -111,7 +111,7 @@
         musica.addEventListener('error', () => {
             console.error("Error loading audio. Please check the file path.");
         });
-    </script>  
+    </script>
 
 </body>
 </html>

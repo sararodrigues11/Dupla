@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Guess the country!</title>
-
+    <title>Guess the Country!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,8 +13,8 @@
     </div>
 
     <div class="box-line-1">It is the birthplace of flamenco, a style of music and dance full of passion and energy</div>
-    <div class="box-line-2">The king is still a member of power</div>
-    <div class="box-line-3">It has a world-renowned cultural dish, “Paella”</div>
+    <div class="box-line-2" style="display:none;">The king is still a member of power</div>
+    <div class="box-line-3" style="display:none;">It has a world-renowned cultural dish, “Paella”</div>
 
     <div class="answer-box">
         <input type="text" id="userAnswer" placeholder="Type your guess here..." />
@@ -27,14 +26,12 @@
         <button class="btn" id="nextButton">Next</button>
     </div>
 
-    
     <audio id="musica-fundo" src="song.mp3.mp3" loop></audio>
     <button id="botao-musica">🔊</button>
 
     <div class="credit">
         <p>Made by Rita and Sara</p>
     </div>
-
 
     <script>
         console.log("Hello, World!");
@@ -54,6 +51,8 @@
             else if (hintClicks === 2) {
                 line3.style.display = 'block';  
                 console.log("Second click: Line 3 is now visible!");
+                hintButton.disabled = true; 
+                console.log("No more hints available.");
             }
             else {
                 console.log("Hint button clicked, but lines are already visible.");

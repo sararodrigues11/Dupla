@@ -11,7 +11,6 @@
         <source src="../easy/song.mp3.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-   
     
     <button id="botao-musica">🔊</button>
 
@@ -37,8 +36,8 @@
         <p>Made by Rita and Sara</p>
     </div>
 
-
     <script>
+      
         const hintButton = document.getElementById('hintButton');
         const line2 = document.querySelector('.box-line-2'); 
         const line3 = document.querySelector('.box-line-3'); 
@@ -48,13 +47,14 @@
             hintClicks++; 
 
             if (hintClicks === 1) {
-                line2.style.display = 'block'; 
+                line2.style.display = 'block';
             }
             else if (hintClicks === 2) {
-                line3.style.display = 'block';  
+                line3.style.display = 'block';
             }
         });
 
+        
         const correctCountry = ["norway", "Norway", "noruega", "Noruega"];  
 
         const userAnswerInput = document.getElementById("userAnswer");
@@ -75,7 +75,7 @@
 
             if (correctCountry.some(country => country.toLowerCase() === userAnswer)) {
                 alert("Correct! The country is Norway!");
-                
+
                 setTimeout(function() {
                     window.location.href = "../hard/question30.html";
                 }, 1000);
@@ -86,6 +86,11 @@
             userAnswerInput.value = "";  
         }
 
+        function previousQuestion() {
+            window.history.back(); 
+        }
+
+       
         const musica = document.getElementById("musica-fundo");
         const botaoMusica = document.getElementById("botao-musica");
         let musicaLigada = true;
@@ -101,20 +106,15 @@
             musicaLigada = !musicaLigada; 
         });
 
-       
+        
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                musica.play(); 
-            }, 100); 
+            musica.play();
         });
 
-  
         musica.addEventListener('error', () => {
             console.error("Error loading audio. Please check the file path.");
         });
 
     </script>
-
 </body>
 </html>
-
